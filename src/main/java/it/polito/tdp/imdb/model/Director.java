@@ -1,15 +1,33 @@
 package it.polito.tdp.imdb.model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Director {
 	Integer id;
 	String firstName;
 	String lastName;
+	List<Integer> idAttori;
+	List<Integer> movies;
 	
 	public Director(Integer id, String firstName, String lastName) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.idAttori=new LinkedList<Integer>();
+		this.movies=new LinkedList<Integer>();
+	}
+
+	public List<Integer> getIdAttori() {
+		return idAttori;
+	}
+
+	public void setIdAttori(Integer idAttori) {
+		this.idAttori.add(idAttori);
+	}
+	public void setmovies(Integer idAttori) {
+		this.movies.add(idAttori);
 	}
 
 	public Integer getId() {
